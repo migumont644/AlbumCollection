@@ -21,6 +21,7 @@ namespace AlbumCollection
 
         private void addButton_Click(object sender, EventArgs e)
         {
+            notexistLabel.Text = "";
             orderList.Add(albumInfoBox.Text);
             sortedList.Add(albumInfoBox.Text);
 
@@ -42,7 +43,29 @@ namespace AlbumCollection
 
         private void removeButton_Click(object sender, EventArgs e)
         {
+            if (sortedList.Contains(albumInfoBox.Text))
+            {
+                sortedList.Remove(albumInfoBox.Text);
+                orderList.Remove(albumInfoBox.Text);
+                sortedList.Sort();
+                sortLabel.Text = "";
+                for (int i = 0; i < sortedList.Count(); i++)
+                {
+                    sortLabel.Text += "\n" + sortedList[i];
+                }
+                
+                orderLabel.Text = "";      
+                for (int i = 0; i < orderList.Count(); i++)
 
+                {
+                    orderLabel.Text += "\n" + orderList[i];
+
+                }
+            }
+            else
+            {
+                notexistLabel.Text = $"{albumInfoBox.Text} does not exist in the database";
+            }
         }
     }
 }

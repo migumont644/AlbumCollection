@@ -37,6 +37,7 @@ namespace AlbumCollection
             this.orderLabel = new System.Windows.Forms.Label();
             this.originalLabel = new System.Windows.Forms.Label();
             this.sortedLabel = new System.Windows.Forms.Label();
+            this.notexistLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -116,12 +117,23 @@ namespace AlbumCollection
             this.sortedLabel.TabIndex = 8;
             this.sortedLabel.Text = "Sorted Order";
             // 
+            // notexistLabel
+            // 
+            this.notexistLabel.AutoSize = true;
+            this.notexistLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.notexistLabel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.notexistLabel.Location = new System.Drawing.Point(185, 50);
+            this.notexistLabel.Name = "notexistLabel";
+            this.notexistLabel.Size = new System.Drawing.Size(0, 29);
+            this.notexistLabel.TabIndex = 9;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.IndianRed;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.notexistLabel);
             this.Controls.Add(this.sortedLabel);
             this.Controls.Add(this.originalLabel);
             this.Controls.Add(this.orderLabel);
@@ -147,6 +159,7 @@ namespace AlbumCollection
         private System.Windows.Forms.Label orderLabel;
         private System.Windows.Forms.Label originalLabel;
         private System.Windows.Forms.Label sortedLabel;
+        private System.Windows.Forms.Label notexistLabel;
     }
 }
 
